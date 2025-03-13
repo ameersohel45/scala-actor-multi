@@ -1,0 +1,48 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.10.7 (Ubuntu Java 21.0.6)
+[debug] Load.defaultLoad until apply took 227.087749ms
+[debug]           Load.loadUnit: plugins took 152.313773ms
+[debug]           Load.loadUnit: defsScala took 0.773793ms
+[debug] [Loading] Scanning directory /home/sohel/Intelli/PlayWithPekko/my-play/project
+[debug]             Load.loadUnit: mkEval took 22.296589ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/sohel/Intelli/PlayWithPekko/my-play/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 25.809145 ms
+[info] loading settings for project my-play-build from plugins.sbt...
+[debug]               Load.resolveProject(my-play-build) took 48.389749ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id my-play-build, base: /home/sohel/Intelli/PlayWithPekko/my-play/project, plugins: List(<none>))) took 98.553114ms
+[debug] [Loading] Done in /home/sohel/Intelli/PlayWithPekko/my-play/project, returning: (my-play-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 914.092139ms
+[debug]           Load.loadUnit: cleanEvalClasses took 10.162107ms
+[debug]         Load.loadUnit(file:/home/sohel/Intelli/PlayWithPekko/my-play/project/, ...) took 1105.141724ms
+[debug]       Load.apply: load took 1306.886798ms
+[debug]       Load.apply: resolveProjects took 9.769297ms
+[debug]       Load.apply: finalTransforms took 98.502434ms
+[debug]       Load.apply: config.delegates took 11.271474ms
+[debug]       Load.apply: Def.make(settings)... took 615.771636ms
+[debug]       Load.apply: structureIndex took 181.359323ms
+[debug]       Load.apply: mkStreams took 3.173091ms
+[info] loading project definition from /home/sohel/Intelli/PlayWithPekko/my-play/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

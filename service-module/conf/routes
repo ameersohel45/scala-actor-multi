@@ -1,0 +1,9 @@
+
+
+
+# ~~~ Datasets API ~~~
+GET     /api/getdata                controllers.DatasetsController.getAllDatasets
+GET     /api/getbyid/:id            controllers.DatasetsController.getDatasetById(id: String)
+POST    /api/create                controllers.DatasetsController.createDataset
+PUT     /api/update         controllers.DatasetsController.updateDataset
+DELETE  /api/delete/:id            controllers.DatasetsController.deleteDatasetById(id: String)

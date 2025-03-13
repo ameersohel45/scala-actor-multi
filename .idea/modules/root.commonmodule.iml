@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="commonmodule [file:/home/sohel/Intelli/scalarestprojects/scalarestmulti/]" external.linked.project.path="$MODULE_DIR$/../../commonmodule" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" external.system.module.type="nestedProject" type="JAVA_MODULE" version="4">
+  <component name="DisplayModuleName">
+    <option name="name" value="commonmodule" />
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_21">
+    <output url="file://$MODULE_DIR$/../../commonmodule/target/scala-3.3.1/classes" />
+    <output-test url="file://$MODULE_DIR$/../../commonmodule/target/scala-3.3.1/test-classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../commonmodule">
+      <sourceFolder url="file://$MODULE_DIR$/../../commonmodule/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../commonmodule/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: scala-sdk-3.3.1" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala3-library_3:3.3.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.persistence:jakarta.persistence-api:3.1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.postgresql:postgresql:42.7.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.14.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.10:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.hibernate.orm:hibernate-core:6.6.1.Final:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.checkerframework:checker-qual:3.41.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.14.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.14.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.transaction:jakarta.transaction-api:2.0.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.jboss.logging:jboss-logging:3.5.0.Final:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.hibernate.common:hibernate-commons-annotations:7.0.1.Final:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.smallrye:jandex:3.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml:classmate:1.5.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: net.bytebuddy:byte-buddy:1.14.18:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.xml.bind:jakarta.xml.bind-api:4.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish.jaxb:jaxb-runtime:4.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.inject:jakarta.inject-api:2.0.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.antlr:antlr4-runtime:4.13.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: jakarta.activation:jakarta.activation-api:2.1.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish.jaxb:jaxb-core:4.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.eclipse.angus:angus-activation:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.glassfish.jaxb:txw2:4.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.sun.istack:istack-commons-runtime:4.1.1:jar" level="project" />
+  </component>
+</module>
