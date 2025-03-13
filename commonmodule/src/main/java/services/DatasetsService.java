@@ -10,6 +10,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.PersistenceException;
 import jakarta.transaction.*;
 import models.Datasets;
+import org.hibernate.internal.build.AllowSysOut;
 import repositories.DatasetsRepository;
 import utils.ResponseBuilder;
 import utils.Validator;
@@ -54,6 +55,7 @@ public class DatasetsService {
         try {
             Datasets dataset = entityManager.find(Datasets.class, id);
             if (dataset != null) {
+                System.out.println(ResponseBuilder.buildResponseOngetById("Success", 200, "Dataset retrieved successfully", dataset));
                 return ResponseBuilder.buildResponseOngetById("Success", 200, "Dataset retrieved successfully", dataset);
             } else {
                 return ResponseBuilder.buildResponse(id, "Failure", 404, "Dataset not found for ID: " + id);
@@ -69,15 +71,11 @@ public class DatasetsService {
         Datasets dataset = null;
 
         try {
-
                 dataset = objectMapper.readValue(json, Datasets.class);
-
-
             Optional<String> validationError = Validator.validate(dataset);
             if (validationError.isPresent()) {
                 return ResponseBuilder.buildResponse(dataset.getId(), "Failure", 400, validationError.get());
             }
-
             if (entityManager.find(Datasets.class, dataset.getId()) != null) {
                 return ResponseBuilder.buildResponse(dataset.getId(), "Failure", 409, "Dataset with same Id already exists");
             }

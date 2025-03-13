@@ -10,7 +10,6 @@ import org.apache.pekko.actor.typed.Scheduler
 import org.apache.pekko.actor.typed.scaladsl.AskPattern.Askable
 import play.api.libs.json.{JsObject, JsValue, Json}
 import services.DatasetsService
-
 import javax.inject.Inject
 import scala.concurrent.{ExecutionContext, Future}
 import scala.concurrent.duration.DurationInt
@@ -23,12 +22,13 @@ class DatasetsController @Inject()(cc: ControllerComponents, datasetService: Dat
   private val datasetActor: ActorRef[DatasetsActor.Command] = {
     actorSystem.systemActorOf(DatasetsActor(datasetService), "dataset-actor")
   }
+  
 
-  private def process(operation: String, request: String = "Null"): Future[Result] =
+  private def process(operation: String, request: JsObject = Json.obj()): Future[Result] =
     datasetActor.ask(replyTo => ProcessRequest(operation, request, replyTo)).map {
       case ResponseBody(responseBody) =>
         val statusCode: Int = 200
-        Status(statusCode)(Json.toJson(responseBody))
+        Status(statusCode)(responseBody)
     }.recover {
       case ex => InternalServerError(Json.obj("error" -> s"Error: ${ex.getMessage}"))
     }
@@ -38,25 +38,24 @@ class DatasetsController @Inject()(cc: ControllerComponents, datasetService: Dat
   }
 
   def getDatasetById(id: String): Action[AnyContent] = Action.async {
-    val request = id
+    val request = Json.obj("id" -> id)
     process(Operation.ReadById, request)
   }
 
   def createDataset: Action[JsValue] = Action.async(parse.json) { request =>
     val dataset: JsObject = request.body.as[JsObject]
-    val requestbody = dataset.toString
-    process(Operation.Create, requestbody)
+    process(Operation.Create, dataset)
   }
 
   def updateDataset: Action[JsValue] = Action.async(parse.json) { request =>
     val updateDataset: JsObject = request.body.as[JsObject]
-    val requestbody = updateDataset.toString
-    process(Operation.Update, requestbody)
+    process(Operation.Update, updateDataset)
   }
 
   def deleteDatasetById(id: String): Action[AnyContent] = Action.async {
-    val request = id
+    val request = Json.obj("id" -> id)
     process(Operation.DeleteById, request)
   }
 }
+
 

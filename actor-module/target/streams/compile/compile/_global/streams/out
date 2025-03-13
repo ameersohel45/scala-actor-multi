@@ -1,0 +1,29 @@
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:42:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m42 |[0m  [33mdef[0m [36mgetAllDatasets[0m: [35mJsObject[0m = {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:48:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m48 |[0m  [33mdef[0m [36mgetDatasetById[0m([36mid[0m: [35mString[0m): [35mJsObject[0m = {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:53:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m53 |[0m  [33mdef[0m [36mcreate[0m([36mrequest[0m: [35mJsObject[0m): [35mJsObject[0m = {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:58:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m58 |[0m  [33mdef[0m [36mupdate[0m([36mrequest[0m: [35mJsObject[0m): [35mJsObject[0m = {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:63:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m63 |[0m  [33mdef[0m [36mdelete[0m([36mid[0m: [35mString[0m): [35mJsObject[0m = {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:69:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m69 |[0m  [33mimplicit[0m [33mval[0m [36mmapWrites[0m: [35mWrites[0m[[35mMap[0m[[35mString[0m, [35mObject[0m]] = [33mnew[0m [35mWrites[0m[[35mMap[0m[[35mString[0m, [35mObject[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /home/sohel/Intelli/scalarestprojects/scalarestmulti/actor-module/src/main/java/actors/DatasetsActor.scala:77:2 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m77 |[0m  [33mimplicit[0m [33mval[0m [36mjavaMapWrites[0m: [35mWrites[0m[java.util.Map[[35mString[0m, [35mObject[0m]] = [33mnew[0m [35mWrites[0m[java.util.Map[[35mString[0m, [35mObject[0m]] {[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m  ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m7 warnings found[0m
