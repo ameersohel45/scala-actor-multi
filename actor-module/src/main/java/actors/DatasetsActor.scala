@@ -40,29 +40,29 @@ class DatasetsActor(context: ActorContext[DatasetsActor.Command], datasetsServic
         }
 
   def getAllDatasets: JsObject = {
-    val javaMapResult = datasetsService.getAllDatasets()
-    val result= javaMapResult.asScala.toMap
-    Json.toJson(result).as[JsObject]
+    val responseFromservice = datasetsService.getAllDatasets()
+    val finalResponse= responseFromservice.asScala.toMap
+    Json.toJson(finalResponse).as[JsObject]
   }
 
   def getDatasetById(id: String): JsObject = {
-    val result = datasetsService.getDatasetById(id)
-    Json.toJson(result).as[JsObject]
+    val responseFromservice = datasetsService.getDatasetById(id)
+    Json.toJson(responseFromservice).as[JsObject]
   }
 
   def create(request: JsObject): JsObject = {
-    val response = datasetsService.createDataset(request.toString())
-    Json.toJson(response).as[JsObject]
+    val responseFromservice = datasetsService.createDataset(request.toString())
+    Json.toJson(responseFromservice).as[JsObject]
   }
 
   def update(request: JsObject): JsObject = {
-    val response = datasetsService.updateDataset(request.toString())
-    Json.toJson(response).as[JsObject]
+    val responseFromservice = datasetsService.updateDataset(request.toString())
+    Json.toJson(responseFromservice).as[JsObject]
   }
 
   def delete(id: String): JsObject = {
-    val response = datasetsService.deleteDataset(id)
-    Json.toJson(response).as[JsObject]
+    val responseFromservice = datasetsService.deleteDataset(id)
+    Json.toJson(responseFromservice).as[JsObject]
   }
 
 

@@ -11,7 +11,6 @@ import jakarta.persistence.PersistenceException;
 import jakarta.transaction.*;
 import models.Datasets;
 import org.hibernate.internal.build.AllowSysOut;
-import repositories.DatasetsRepository;
 import utils.ResponseBuilder;
 import utils.Validator;
 
@@ -26,13 +25,10 @@ public class DatasetsService {
 
     @PersistenceContext
     private EntityManager entityManager;
-
-    private final DatasetsRepository dataRepository;
     private final ObjectMapper objectMapper;
 
     @Inject
-    public DatasetsService(DatasetsRepository dataRepository, ObjectMapper objectMapper, EntityManager entityManager) {
-        this.dataRepository = dataRepository;
+    public DatasetsService( ObjectMapper objectMapper, EntityManager entityManager) {
         this.objectMapper = objectMapper;
         this.entityManager = entityManager;
     }
@@ -49,6 +45,8 @@ public class DatasetsService {
         }
         return response;
     }
+    
+    
 
     public Map<String, Object> getDatasetById(String id) {
         Map<String, Object> response = new HashMap<>();
@@ -83,7 +81,12 @@ public class DatasetsService {
             dataset.setCreatedAt(LocalDateTime.now());
             dataset.setUpdatedAt(LocalDateTime.now());
             //entityManager.persist(dataset);
-            dataRepository.save(dataset);
+//            dataRepository.save(dataset);
+            if(!entityManager.getTransaction().isActive()){
+                entityManager.getTransaction().begin();
+            }
+            entityManager.persist(dataset);
+            entityManager.getTransaction().commit();
 
         } catch (InvalidFormatException e) {
             return ResponseBuilder.buildResponse("id", "Failure", 400, "Status should be Live, Draft, or RETIRED");
